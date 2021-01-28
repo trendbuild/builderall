@@ -1,0 +1,9 @@
+"use strict";/**
+ * Trendbuild - WhatsApp Button 
+ * Version: 1.0
+ * 
+ * Ex.:
+ * <script id="wbs_trendbuild_script" src="https://wbs.trendbuild.com.br/wbs-min.js" phone="5561987654321" text="Olá"></script>
+ * <script id="wbs_trendbuild_script" src="https://wbs.trendbuild.com.br/wbs-min.js" phone="5561987654321" text="Olá" align="left"></script>
+ * <script id="wbs_trendbuild_script" src="https://wbs.trendbuild.com.br/wbs-min.js" phone="5561987654321" text="Olá" align="right"></script>
+ */(function(m,a){console.log("Trendbuild - WhatsApp Button init");var c=a.getElementById("wbs_trendbuild_script"),b=c.getAttribute("phone"),d=c.getAttribute("text"),e=c.getAttribute("align")||"left",f="https://api.whatsapp.com/send?phone="+b+"&text="+encodeURIComponent(d),g=a.getElementsByTagName("head")[0],h=a.getElementsByTagName("body")[0],i=a.createElement("link");i.setAttribute("rel","stylesheet"),i.setAttribute("href","https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"),g.append(i);var j=a.createElement("a");j.setAttribute("id","wpp_flutuanteV2"),j.setAttribute("title","WhatsApp"),j.setAttribute("style","position: fixed; width: 60px; height: 60px; bottom: 40px; "+e+": 40px; background-color: #25d366; color: #fff; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 1px 1px 2px #888; z-index: 9999999;"),j.setAttribute("href",f);var k=a.createElement("i");k.setAttribute("class","fa fa-whatsapp "),k.setAttribute("style","margin-top: 16px;"),h.append(j),j.append(k),console.log("phone = "+b),console.log("text = "+d),console.log("align = "+e),console.log("href = "+f),console.log("Trendbuild - WhatsApp Button end")})(window,document);

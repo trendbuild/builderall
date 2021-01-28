@@ -1,0 +1,31 @@
+{
+  "name": "builderall",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel ./wbs/wbs.js -o ./wbs/wbs-min.js && babel ./wbs --out-dir ./wbs/dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/preset-env": "^7.7.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "babel-preset-minify": "^0.5.1"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trendbuild/builderall.git"
+  },
+  "author": "Vinicius Nascimento",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trendbuild/builderall/issues"
+  },
+  "homepage": "https://github.com/trendbuild/builderall#readme"
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Botão WhatsApp</title>
+</head>
+
+<body>
+    <script>
+        (function(f, b) {
+            console.log('Trendbuild - WhatsApp Button');
+
+            const NUMBER = '5561987654321';
+            const MESSAGE = 'Olá';
+            const WHERE = 'left'; // left = esquerda ou right = direita
+
+            let head = b.getElementsByTagName('head')[0];
+            let body = b.getElementsByTagName('body')[0];
+
+            let fontawesome = b.createElement('link');
+            fontawesome.setAttribute('rel', 'stylesheet');
+            fontawesome.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css');
+            head.append(fontawesome);
+
+            const href = 'https://api.whatsapp.com/send?phone=' + NUMBER + '&text=' + encodeURIComponent(MESSAGE);
+
+            let link = b.createElement('a');
+            link.setAttribute('id', 'wpp_flutuanteV2');
+            link.setAttribute('title', 'WhatsApp');
+            link.setAttribute('style', 'position: fixed; width: 60px; height: 60px; bottom: 40px; ' + WHERE + ': 40px; background-color: #25d366; color: #fff; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 1px 1px 2px #888; z-index: 9999999;');
+            link.setAttribute('href', href);
+
+            let icon = b.createElement('i');
+            icon.setAttribute('class', 'fa fa-whatsapp ');
+            icon.setAttribute('style', 'margin-top: 16px;');
+
+            body.append(link);
+            link.append(icon);
+
+            console.log('NUMBER = ' + NUMBER);
+            console.log('MESSAGE = ' + MESSAGE);
+            console.log('WHERE = ' + WHERE);
+            console.log('URL = ' + href);
+
+        })(window, document);
+    </script>
+</body>
+
+</html>
